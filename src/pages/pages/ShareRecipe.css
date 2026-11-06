@@ -1,0 +1,51 @@
+.share-recipe-page {
+  min-height: 100vh;
+  padding: 35px 20px;
+  background: #fffaf5;
+  color: #30251f;
+  font-family: Arial, sans-serif;
+}
+
+.share-recipe-page h1,
+.share-recipe-page > p {
+  text-align: center;
+}
+
+.share-recipe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 650px;
+  margin: 25px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px #00000012;
+}
+
+.share-recipe-form input,
+.share-recipe-form select,
+.share-recipe-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e4cabb;
+  border-radius: 8px;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.share-recipe-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.share-recipe-form button {
+  margin-top: 10px;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #b84d22;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}

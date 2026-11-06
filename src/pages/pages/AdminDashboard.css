@@ -1,0 +1,137 @@
+.admin-dashboard {
+  min-height: 100vh;
+  background: #f8f5f2;
+  color: #30251f;
+  font-family: Arial, sans-serif;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 5%;
+  background: #fff;
+  box-shadow: 0 2px 10px #00000012;
+}
+
+.admin-header h2 {
+  color: #b84d22;
+  margin: 0;
+}
+
+.admin-header button,
+.admin-section-heading button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background: #b84d22;
+  color: white;
+  cursor: pointer;
+}
+
+.admin-main {
+  padding: 30px 5%;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+  margin: 28px 0;
+}
+
+.admin-stat-card {
+  padding: 22px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #0000000c;
+}
+
+.admin-stat-card span {
+  font-size: 28px;
+}
+
+.admin-stat-card h3 {
+  margin: 12px 0 8px;
+  color: #765b4b;
+}
+
+.admin-stat-card strong {
+  font-size: 28px;
+  color: #b84d22;
+}
+
+.admin-section {
+  margin-top: 28px;
+  padding: 22px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #0000000c;
+}
+
+.admin-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-table-wrapper {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 13px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.admin-table th {
+  background: #fff4eb;
+}
+
+.delete-user-button {
+  border: none;
+  border-radius: 6px;
+  padding: 7px 12px;
+  background: #ffe5e2;
+  color: #b42318;
+  cursor: pointer;
+}
+
+.shared-recipe-list {
+  display: grid;
+  gap: 10px;
+}
+
+.shared-recipe-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 12px;
+  background: #fffaf5;
+  border-radius: 8px;
+}
+
+.activity-list li {
+  margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  .admin-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .shared-recipe-item {
+    flex-direction: column;
+  }
+}

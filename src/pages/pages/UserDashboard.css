@@ -1,0 +1,268 @@
+
+.user-dashboard {
+  min-height: 100vh;
+  background: #fffaf5;
+  color: #30251f;
+  font-family: Arial, sans-serif;
+}
+
+.user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 5%;
+  background: #fff;
+  box-shadow: 0 2px 12px #00000010;
+}
+
+.user-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #b84d22;
+}
+
+.user-header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.favorites-toggle,
+.logout-button {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.favorites-toggle {
+  background: #fff0e7;
+  color: #b84d22;
+}
+
+.logout-button {
+  background: #b84d22;
+  color: white;
+}
+
+.recipe-hero {
+  text-align: center;
+  padding: 55px 20px;
+  background: linear-gradient(135deg, #fff0df, #ffe0c2);
+}
+
+.recipe-hero h1 {
+  margin: 0 0 12px;
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+.recipe-hero p {
+  margin-bottom: 25px;
+  color: #765b4b;
+}
+
+.recipe-search {
+  width: min(550px, 90%);
+  padding: 14px 18px;
+  border: 1px solid #e5c7b4;
+  border-radius: 30px;
+  outline: none;
+  font-size: 16px;
+}
+
+.recipe-section {
+  padding: 35px 5%;
+}
+
+.recipe-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 28px;
+}
+
+.category-button {
+  padding: 9px 16px;
+  border: 1px solid #e6c9b8;
+  border-radius: 22px;
+  background: white;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.category-button.active {
+  background: #b84d22;
+  color: white;
+  border-color: #b84d22;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.recipe-card {
+  overflow: hidden;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px #00000012;
+  transition: transform 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+}
+
+.recipe-image-container {
+  position: relative;
+  height: 190px;
+  background: #f3e9e2;
+}
+
+.recipe-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.favorite-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: white;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.recipe-card-content {
+  padding: 16px;
+}
+
+.recipe-category {
+  color: #b84d22;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.recipe-card h3 {
+  margin: 8px 0 15px;
+}
+
+.view-recipe-button {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  background: #b84d22;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.no-recipes {
+  text-align: center;
+  padding: 40px;
+}
+
+/* Delete Shared Recipe Button */
+.delete-recipe-button {
+  width: 100%;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.delete-recipe-button:hover {
+  background-color: #b02a37;
+}
+
+.recipe-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #00000080;
+}
+
+.recipe-modal {
+  position: relative;
+  width: min(700px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 25px;
+  border-radius: 16px;
+  background: white;
+}
+
+.close-modal-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.modal-recipe-image {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.modal-category {
+  color: #b84d22;
+  text-transform: capitalize;
+}
+
+.recipe-instructions {
+  white-space: pre-line;
+}
+
+@media (max-width: 600px) {
+  .user-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .recipe-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .recipe-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 14px;
+  }
+
+  .recipe-image-container {
+    height: 150px;
+  }
+}
+
